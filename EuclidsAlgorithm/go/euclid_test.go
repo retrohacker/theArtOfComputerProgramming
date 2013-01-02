@@ -9,9 +9,13 @@ var flagTests = []struct {
 	output int
 }{
 	{20,100,20},
+	{100,20,20},
 	{8,15,1},
+	{15,8,1},
 	{21,133,7},
+	{133,21,7},
 	{36,4352,4},
+	{4352,36,4},
 }
 
 func TestEuclidsAlgorithm(t *testing.T) {

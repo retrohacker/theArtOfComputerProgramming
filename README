@@ -1,0 +1,12 @@
+This is a repository that I will be using to organize all of the code I write while working through the book "The Art of Computer Programming" by Donald Knuth. The filesystem is organized in the following manner:
+
+Algorithm1/
+|-programmingLanguage1/
+| |-SupportingFiles
+|-programmingLanguage2/
+  |-SupportingFiles
+Algorithm2/
+|-programmingLangauge1/
+| |-SupportingFiles
+|-programmingLanguage2/
+  |-SupportingFiles

@@ -10,3 +10,6 @@ Algorithm2/
 | |-SupportingFiles
 |-programmingLanguage2/
   |-SupportingFiles
+
+Important notes:
+Javascript is run via a web-browser using document.write() for system output.

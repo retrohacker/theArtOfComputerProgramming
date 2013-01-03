@@ -24,7 +24,10 @@ public class TestEuclid extends TestCase {
 		new TestCase(21,133,7),
 		new TestCase(133,21,7),
 		new TestCase(36,4352,4),
-		new TestCase(4352,36,4)
+		new TestCase(4352,36,4),
+		new TestCase(-4352,36,-1),
+		new TestCase(4352,-36,-1),
+		new TestCase(-21,-133,-1)
 	};
 
 	@Test

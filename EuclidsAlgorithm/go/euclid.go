@@ -1,7 +1,7 @@
 package main
 
-func euclid(m,n int) (int) {
-	var r int
+func euclid(m,n uint) (uint) {
+	var r uint
 	//Make sure m > n, if not swap
 	if(n>m) {r=m;m=n;n=r}
 	for m!=n {

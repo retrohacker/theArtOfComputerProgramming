@@ -4,9 +4,9 @@ package main
 import "testing"
 
 var flagTests = []struct {
-	input1 int
-	input2 int
-	output int
+	input1 uint
+	input2 uint
+	output uint
 }{
 	{20,100,20},
 	{100,20,20},

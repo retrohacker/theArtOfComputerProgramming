@@ -12,14 +12,17 @@ var TestCases = []struct{
 	err error;
 }{
 	{1769,551,5,-16,29,nil},
+	{551,1769,-16,5,29,nil},
 	{-1769,551,0,0,0,errors.New(NonPos)},
 	{1769,-551,0,0,0,errors.New(NonPos)},
 	{-1769,-551,0,0,0,errors.New(NonPos)},
 	{120,23,-9,47,1,nil},
+	{23,120,47,-9,1,nil},
 	{-120,23,0,0,0,errors.New(NonPos)},
 	{120,-23,0,0,0,errors.New(NonPos)},
 	{-120,-23,0,0,0,errors.New(NonPos)},
 	{57,46,21,-26,1,nil},
+	{46,57,-26,21,1,nil},
 	{-57,46,0,0,0,errors.New(NonPos)},
 	{57,-46,0,0,0,errors.New(NonPos)},
 	{-57,-46,0,0,0,errors.New(NonPos)},

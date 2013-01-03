@@ -1,6 +1,5 @@
 function Euclid(m,n) {
-	if(m<n){t=m;m=n;n=t;}
-
+	if(m<=0||n<=0){return -1;}
 	var r
 	while(true) {
 		r=m%n;

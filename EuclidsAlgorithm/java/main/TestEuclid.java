@@ -31,7 +31,7 @@ public class TestEuclid extends TestCase {
 	public void testOutput() {
 		for(int i = 0; i < testCases.length; i++) {
 			int result = Euclid.GCD(testCases[i].input1,testCases[i].input2);
-			assertTrue("Case "+i+ "Failed with Output: "+result,result==testCases[i].output);
+			assertTrue("Case "+i+ " Failed with Output: "+result,result==testCases[i].output);
 		}
 	}
 }

@@ -32,10 +32,10 @@ func EuclidExtended(m,n int) (a,b,d int, e error) {
 
 		//Swap values
 		c,d=d,r
-		t:=aNot
-		aNot,a=a,t-q*a
-		t=bNot
-		bNot,b=b,t-q*b
+		temp:=aNot
+		aNot,a=a,temp-q*a
+		temp=bNot
+		bNot,b=b,temp-q*b
 	}
 	return
 }

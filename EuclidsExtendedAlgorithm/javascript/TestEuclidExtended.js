@@ -1,4 +1,5 @@
-testCases = [
+// A table driven test case
+var testCases = [
 		[1769,551,5,-16,29],
 		[-1769,551,0,0,-1],
 		[1769,-551,0,0,-1],
@@ -13,6 +14,10 @@ testCases = [
 
 ]
 
+/**
+ * This function acts as a unit test for EuclidExtended(). It relys on the
+ * table declared above.
+ */
 function TestEuclidExtended() {
 	passed=true
 	for(i=0;i<testCases.length;i++) {

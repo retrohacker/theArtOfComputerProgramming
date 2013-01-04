@@ -1,4 +1,4 @@
-package main;
+package euclidext;
 
 /**
  * A structure desinged to support Euclid's Extended Algorithm.

@@ -1,4 +1,4 @@
-package main;
+package euclidext;
 
 public class EuclidsExtended {
 

@@ -1,4 +1,4 @@
-package main;
+package euclidext;
 
 import org.junit.*;
 import junit.framework.TestCase;

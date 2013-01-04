@@ -1,9 +1,9 @@
-package main
+package euclid
 
-//Import Libraries
 import "testing"
 
-var flagTests = []struct {
+// A table based approach to unit testing
+var testCases = []struct {
 	input1 uint
 	input2 uint
 	output uint
@@ -20,12 +20,13 @@ var flagTests = []struct {
 	{4352,36,4},
 }
 
+//A table based test for Euclid's algorithm.
 func TestEuclidsAlgorithm(t *testing.T) {
-	for i,tt := range flagTests {
-		result:=euclid(tt.input1,tt.input2)
-		if(result!=tt.output) {
-			t.Error("Index ",i," FAILED. Input:",tt.input1," ",tt.input2,
-			" Expected Output:",tt.output," Result:",result)
+	for i,testCase := range testCases {
+		result:=euclid(testCase.input1,testCase.input2)
+		if(result!=testCase.output) {
+			t.Error("Index ",i," FAILED. Input:",testCase.input1," ",testCase.input2,
+			" Expected Output:",testCase.output," Result:",result)
 		}
 	}
 }

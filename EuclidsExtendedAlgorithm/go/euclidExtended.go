@@ -1,17 +1,24 @@
-package main
+/*
+	Package euclidext contains a simple implementation of Euclid's Extended
+	Algorithm for finding a functions greatest common denominator. It is
+	capable of solving the equation A*M+B*N=D for any input M and N where D
+	is the greatest common denominator.
+*/
+package euclidext
 
 import "errors"
 
-const NonPos = "Non Positive Input";
+// Used as an error message indicating EuclidExtended was supplied with an
+// input outside the range the function can handle. 
+const ErrNonPos = "Non Positive Input";
 
-//Returns:
-//a=Coefficient of m
-//b=Coefficient of n
-//d=Greatest Common Devisor
-//such that a*m+b*n=d
-//e=if invalid input is supplied
+// Solves the equation A*M+B*N=D for any input M and N where D is the greatest
+// common denominator. Returns A, B, D, and an error in the event of invalid
+// input. If an error is encountered A, B, and D will be 0.
 func EuclidExtended(m,n int) (a,b,d int, e error) {
-	if(m<0||n<0) {return 0,0,0,errors.New(NonPos)};
+	//Check for invalid input
+	if(m<0||n<0) {return 0,0,0,errors.New(ErrNonPos)};
+
 	//Initialize all variables
 	a,b,d,e=0,1,n,error(nil)
 	aNot,bNot,c:=1,0,m
@@ -23,15 +30,12 @@ func EuclidExtended(m,n int) (a,b,d int, e error) {
 		if(r==0) {break}
 		q=c/d;
 
-		//Recycle
-		c=d
-		d=r
+		//Swap values
+		c,d=d,r
 		t:=aNot
-		aNot=a
-		a=t-q*a
+		aNot,a=a,t-q*a
 		t=bNot
-		bNot=b
-		b=t-q*b
+		bNot,b=b,t-q*b
 	}
 	return
 }

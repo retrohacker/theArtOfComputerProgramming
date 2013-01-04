@@ -2,23 +2,35 @@ package euclidext;
 
 /**
  * A structure desinged to support Euclid's Extended Algorithm.
+ * The data is in the form A*M+B*N=D where A=coeff1, M=input1, 
+ * B=coeff2, N=input2, and D=gcd
  */
 class Result {
-	public int input1;
-	public int input2;
-	public int coeff1;
-	public int coeff2;
-	public int gcd;	
-	public boolean errorFlag;
-	public String err;
+	public int input1; //M
+	public int input2; //N
+	public int coeff1; //A
+	public int coeff2; //B
+	public int gcd; //D
+	public boolean errorFlag; //Set to true if an error is encountered
+	public String err; //The error that has been encountered
 
+	/**
+	 * Initialize Result with input data.
+	 * When using this constructor it is assumed the rest of the data will be
+	 * filled by an external function at a later point in time. If all the
+	 * values for Result are known at the time of instantiation, use the
+	 * other constructor.
+	 */
 	public Result(int input1, int input2) {
 		this.input1 = input1;
 		this.input2 = input2;
-		this.errorFlag = false;
-		this.err = null;
 	}
 
+	/**
+	 * Initialize Result with all data.
+	 * This constructor should be used when all values of the Result are already known.
+	 * an example of when to use this type of constructor is when making unit tests.
+	 */
 	public Result(int input1, int input2, int coeff1, int coeff2, int gcd, boolean errorFlag, String err) {
 		this.input1=input1;
 		this.input2=input2;
@@ -29,6 +41,12 @@ class Result {
 		this.err=err;
 	}
 
+	/**
+	 * An error has been encountered.
+	 * This will set all generated values to 0 (coeff1, coeff2, and gcd) as
+	 * well as set the errorFlag to true. The generated error message should
+	 * be passed in as a parameter.
+	 */
 	public void setError(String err) {
 		this.coeff1=0;
 		this.coeff2=0;
